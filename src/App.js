@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header/Header';
+import Board from './components/board/Board';
+import Toolbar from './components/toolbar/Toolbar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  state = {
+    selectedDataStructure: null,
+    rows: 6,
+    cols: 20,
+    speed: "fast",
+  }
+  
+  render(){
+    return (
+      <div className="container">
+        <Header />
+        <Toolbar />
+        <Board rows={this.state.rows} cols={this.state.cols}/>
+      </div>
+    );
+  }
+  
 }
 
 export default App;

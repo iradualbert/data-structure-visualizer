@@ -1,0 +1,58 @@
+.board {
+    margin: 20px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(20, 50px);
+    /* grid-template-rows: repeat(11, 50px); */
+    grid-gap: 0px;
+}
+
+.box {
+
+  /* border: 1px solid #d3d6db; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  font-size: 35px;
+  cursor: pointer;
+  color:#848391;
+  margin-bottom: -1px;
+  margin-left: -1px;
+}
+.index-box{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    font-size: 18px;
+}
+
+.box-value {
+    border: 1px solid turquoise;
+    /* border-bottom: 30px solid lightblue; */
+}
+.pointer {
+    position: absolute;
+    height: 2px;
+    z-index: 1;
+    bottom: -25%;
+    left: 50%;
+    background-color: black;
+    transform-origin: left;
+    transition: all;
+    transition-duration: 2s;
+}
+.pointer-square{
+    position: absolute;
+    height: 25%;
+    width: 100%;
+    z-index: 1;
+    bottom: -25%;
+    left: 0;
+    background-color: lightblue;
+   
+}
